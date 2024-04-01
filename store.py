@@ -54,16 +54,24 @@ store3.add_item("blanket", 30)
 
 # Протестируем методы на одном из магазинов
 # Добавление товара
+print(f"Магазин {store1.name}. Добавление товара oranges")
 store1.add_item("oranges", 0.8)
-print(store1.items)  # Проверяем добавление
+# Проверяем добавление
+print(f"Проверяем добавление: {store1.items}")
 
 # Обновление цены товара
+print(f"Магазин {store1.name}. Обновление цены товара apples")
 store1.update_price("apples", 0.55)
-print(store1.get_price("apples"))  # Смотрим новую цену
+# Смотрим новую цену
+print(f"Смотрим новую цену: {store1.get_price('apples')}")
 
 # Удаление товара
+print(f"Магазин {store1.name}. Удаление товара bananas")
 store1.remove_item("bananas")
-print(store1.items)  # Проверяем состояние ассортимента после удаления
+# Проверяем состояние ассортимента после удаления
+print(f"Проверяем состояние ассортимента после удаления: {store1.items}")
 
 # Запрос цены товара
-print(store1.get_price("milk"))  # Должно вернуть None, т.к. товара нет
+print(f"Магазин {store1.name}. Запрос цены товара milk")
+# Должно вернуть None, т.к. товара нет
+print(f"Должно вернуться None, т.к. товара нет: {store1.get_price('milk')}")
